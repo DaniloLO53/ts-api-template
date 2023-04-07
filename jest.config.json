@@ -17,7 +17,7 @@
   "setupFiles": ["<rootDir>/tests/envs.setup.ts"],
   "setupFilesAfterEnv": ["<rootDir>/tests/afterEnv.setup.ts"],
   "moduleNameMapper": {
-    "@/.*": "<rootDir>/src/$1",
+    "@/(.*)": "<rootDir>/src/$1",
     "@test/(.*)": "<rootDir>/tests/$1",
     "axios": "axios/dist/node/axios.cjs"
   },
