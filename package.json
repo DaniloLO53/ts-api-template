@@ -4,15 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test jest --passWithNoTests --runInBand",
+    "test:staged": "NODE_ENV=test jest --passWithNoTests --runInBand",
     "test:watch": "jest --watch --passWithNoTests --runInBand",
     "lint": "eslint .",
     "lint:staged": "lint-staged"
-  },
-  "lint-staged": {
-    "*.ts": [
-      "npm run test"
-    ]
   },
   "repository": {
     "type": "git",
