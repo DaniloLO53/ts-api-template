@@ -4,7 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll",
+    "test:staged": "jest",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "npm run test:staged"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": [
+      "prettier --write --ignore-unknown",
+      "npm run test:staged"
+    ]
   },
   "repository": {
     "type": "git",
