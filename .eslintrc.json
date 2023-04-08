@@ -39,7 +39,7 @@
           ".tsx"
         ]
       },
-      "typescript": {}
+      "typescript": {} // it loads <rootdir>/tsconfig.json to eslint
     },
     "import/alias": {
       "@": "./src"
@@ -52,9 +52,13 @@
     }
   },
   "rules": {
+    "eol-last": [
+      "error",
+      "always"
+    ],
     "indent": [
       "error",
-      4
+      2
     ],
     "linebreak-style": [
       "error",
